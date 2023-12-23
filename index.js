@@ -10,14 +10,14 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/access", (req, res) => {
   if (req.body["code"] === "1111") {
-    res.sendFile(__dirname + "/public/secret.html");
+    res.sendFile(__dirname + "/secret.html");
   } else {
-    res.sendFile(__dirname + "/public/index.html");
+    res.sendFile(__dirname + "/index.html");
   }
 });
 
